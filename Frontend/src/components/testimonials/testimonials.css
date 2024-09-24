@@ -1,0 +1,97 @@
+/* testimonials.css */
+
+.testimonials {
+    background: #eaabf4; /* Light background for contrast */
+    padding: 50px;
+    color: #333;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #6a0dad; /* Deep purple for headings */
+    letter-spacing: 2px;
+  }
+  
+  .testimonials-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .testimonial-card {
+    background: #fff; /* White background for the card */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px); /* Slight hover lift */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+  }
+  
+  .student-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #6a0dad; /* Purple border for image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .student-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+  
+  .testimonial-card:hover .student-image img {
+    transform: scale(1.1); /* Image scales slightly on hover */
+  }
+  
+  .message {
+    font-size: 16px;
+    font-style: italic;
+    margin: 15px 0;
+    color: #555; /* Grey color for the message */
+    transition: color 0.5s ease;
+  }
+  
+  .testimonial-card:hover .message {
+    color: #6a0dad; /* Message turns purple on hover */
+  }
+  
+  .info {
+    margin-top: 20px;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6a0dad; /* Name in deep purple */
+  }
+  
+  .position {
+    font-size: 14px;
+    color: #999; /* Light grey for position */
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-card {
+      padding: 20px;
+    }
+  
+    .testimonials h2 {
+      font-size: 28px;
+    }
+  }
+  

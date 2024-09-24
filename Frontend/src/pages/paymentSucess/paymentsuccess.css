@@ -1,0 +1,86 @@
+/* paymentsuccess.css */
+.payment-success-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3f0ff 0%, #e3dcff 100%);
+  }
+  
+  .success-message {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .success-message h2 {
+    font-size: 2rem;
+    color: #6a0dad;
+    margin-bottom: 1rem;
+    animation: slideDown 0.8s ease;
+  }
+  
+  .success-message p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message p:last-child {
+    font-weight: bold;
+    color: #6a0dad;
+  }
+  
+  .common-btn {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    animation: buttonPop 1s ease;
+  }
+  
+  .common-btn:hover {
+    background-color: #570e91;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes buttonPop {
+    0% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

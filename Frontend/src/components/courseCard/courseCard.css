@@ -1,0 +1,125 @@
+/* Container for course cards to arrange them sideways */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styling for the course card container */
+.course-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #6a0dad;
+}
+
+/* Hover effect on the card */
+.course-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 30px rgba(106, 13, 173, 0.2);
+}
+
+/* Course image styling */
+.course-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Image hover zoom effect */
+.course-card:hover .course-image {
+  transform: scale(1.1);
+}
+
+/* Course title styling */
+.course-card h3 {
+  font-size: 22px;
+  color: #6a0dad;
+  margin: 15px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Instructor and other details styling */
+.course-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 5px 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Price styling */
+.course-card p:last-child {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a0dad;
+  margin-bottom: 15px;
+}
+
+/* Common button styling */
+.common-btn {
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.common-btn:hover {
+  background-color: #9b30ff;
+  box-shadow: 0 4px 20px rgba(106, 13, 173, 0.4);
+}
+
+/* Animation for the card appearance */
+.course-card {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Keyframes for the card appearance */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating background effect inside the card */
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(106, 13, 173, 0.4), transparent);
+  border-radius: 50%;
+  animation: floatingBg 6s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+/* Keyframes for floating background */
+@keyframes floatingBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}

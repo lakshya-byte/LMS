@@ -1,0 +1,67 @@
+.about {
+    background-color: #f5f3ff; /* Light purple background */
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .about-content {
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* Increased max width */
+    text-align: center;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards; /* Animation added */
+  }
+  
+  .about-content h2 {
+    color: #6c63ff; /* Dark purple for heading */
+    font-size: 40px; /* Increased font size */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .about-content p {
+    color: #555;
+    font-size: 20px; /* Increased font size */
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .about-content p::first-letter {
+    font-size: 24px; /* Larger first letter */
+    font-weight: bold;
+    color: #6c63ff; /* Highlight the first letter in purple */
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      padding: 30px;
+    }
+  
+    .about-content h2 {
+      font-size: 32px; /* Adjusted font size for smaller screens */
+    }
+  
+    .about-content p {
+      font-size: 18px; /* Adjusted font size for smaller screens */
+    }
+  }
+  

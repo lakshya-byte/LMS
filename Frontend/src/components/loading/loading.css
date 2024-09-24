@@ -1,0 +1,81 @@
+/* Main container for the loading page */
+.loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+  }
+  
+  /* Loader styling */
+  .loader {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: conic-gradient(#fff, #6a11cb, #2575fc, #fff);
+    position: relative;
+    animation: rotate 1.5s linear infinite;
+  }
+  
+  /* Inner circle with pulsating effect */
+  .loader::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Outer ring with glowing effect */
+  .loader::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: glow 2s infinite ease-in-out;
+  }
+  
+  /* Keyframes for the rotating loader */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Keyframes for the pulsating inner circle */
+  @keyframes pulse {
+    0%, 100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0.7;
+    }
+  }
+  
+  /* Keyframes for the glowing outer ring */
+  @keyframes glow {
+    0%, 100% {
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      border-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    }
+  }
+  

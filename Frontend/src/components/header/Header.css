@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+/* CSS for logo in purple theme */
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #6a0dad; /* Purple color for the text */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.logo a {
+  text-decoration: none; /* Removing underline from the link */
+  color: inherit; /* Inheriting the color from the logo class */
+}
+
+.logo:hover {
+  color: #4b0082; /* Darker purple on hover */
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.logo a:hover {
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+  .link {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+      &:hover {
+        color: #8a4baf;
+      }
+    }
+  }
+}

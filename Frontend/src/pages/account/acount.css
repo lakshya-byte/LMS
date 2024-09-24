@@ -1,0 +1,77 @@
+.profile {
+    background-color: #f5f3ff; /* Light purple background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Max width for the profile box */
+    margin: 50px auto; /* Center the profile box */
+    text-align: center;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeIn 0.8s forwards; /* Fade-in animation */
+  }
+  
+  .profile h2 {
+    color: #6c63ff; /* Dark purple for heading */
+    font-size: 36px; /* Font size for the heading */
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .profile-info {
+    background-color: #ffffff; /* White background for profile info */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Transition for hover effect */
+  }
+  
+  .profile-info p {
+    color: #333; /* Dark gray text for profile info */
+    font-size: 18px; /* Font size for the profile details */
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .common-btn {
+    background-color: #6c63ff; /* Button color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+  }
+  
+  .common-btn:hover {
+    background-color: #5a54e5; /* Darker purple on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .profile {
+      padding: 20px; /* Reduced padding for smaller screens */
+    }
+  
+    .profile h2 {
+      font-size: 28px; /* Adjusted font size for smaller screens */
+    }
+  
+    .profile-info p {
+      font-size: 16px; /* Adjusted font size for smaller screens */
+    }
+  }
+  

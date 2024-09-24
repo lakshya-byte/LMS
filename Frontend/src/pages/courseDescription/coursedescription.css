@@ -1,0 +1,77 @@
+/* coursedescription.css */
+
+.course-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    animation: slideIn 0.5s ease-in-out;
+    margin: 20px 0;
+    width: 350px; /* Fixed width for vertical rectangle */
+  }
+  
+  .course-header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align */
+    width: 100%;
+  }
+  
+  .course-image {
+    width: 100%; /* Make the image fill the width */
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px; /* Space between image and info */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .course-info {
+    text-align: center; /* Center the text */
+  }
+  
+  .course-info h2 {
+    font-size: 24px; /* Adjust font size */
+    color: #6f42c1; /* Purple color */
+    margin: 10px 0;
+    text-transform: capitalize;
+  }
+  
+  .course-info p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .common-btn {
+    background-color: #6f42c1; /* Purple */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px; /* Increased padding */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    width: 100%; /* Full width button */
+  }
+  
+  .common-btn:hover {
+    background-color: #5a34a1; /* Darker purple on hover */
+    transform: translateY(-3px);
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
